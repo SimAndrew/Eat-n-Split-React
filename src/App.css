@@ -18,19 +18,27 @@ html {
 }
 
 body {
-	height: 100vh;
 	color: #495057;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 }
 
 .app {
-	min-height: 66vh;
-	display: grid;
-	grid-template-columns: 34rem 44rem;
-	column-gap: 4rem;
-	align-items: start;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 1rem;
+	gap: 4rem;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+	font-size: 2rem;
 }
 
 .button {
@@ -165,4 +173,23 @@ form h2 {
 	text-transform: uppercase;
 	letter-spacing: -0.5px;
 	margin-bottom: 1.6rem;
+}
+
+@media screen and (max-width: 1080px) {
+	.app {
+		padding: 0 2rem;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.app {
+		padding: 2rem 2rem;
+		gap: 2rem;
+	}
 }
